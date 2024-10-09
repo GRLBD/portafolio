@@ -200,7 +200,7 @@
 	
 	.single-work,
 	.journel-detail{
-		padding-top:100px;
+		padding-top:0px;
 	}
 
 }
@@ -286,7 +286,7 @@
 	
 	.banner-one_text{
 		padding-right:0px;
-		margin-bottom:30px;
+		margin-bottom:300px;
 	}
 	
 	.counter-block_one-counter {
@@ -386,6 +386,7 @@
 	.contact-one_heading{
 		font-size:30px;
 		line-height:40px;
+		
 	}
 	
 	
@@ -410,7 +411,7 @@
 	}
 	
 	.gallery-block_one-content {
-		padding: 15px 15px;
+		padding: 0px 0px;
 	}
 	
 	.service-block_one-inner {
@@ -419,10 +420,15 @@
 	
 	.single-work_list li span,
 	.single-work p,
-	.banner-one_text-two,
+	.banner-one_text-two {
+	padding-top: 0px;
+
+	}
 	.banner-one_text {
 		font-size: 16px;
 		line-height: 26px;
+		
+		
 	}
 	
 	.testimonial-block_one-content {
@@ -463,4 +469,29 @@
 		line-height:28px;
 	}
 
+	.banner-one_heading{
+		margin-top: 150px;
+		margin-bottom: 10px;
+	}
+
+	.banner-one{
+	margin-bottom: -100px;
+}
+	.sec-title_heading{
+		margin-bottom: -5px;
+	}
+	.footer_navs {
+		font-size:16px;
+	}
+	.journal-one .journal-block_one {
+		flex: 0 0 500px;
+	}	
+	.journal-block_one-heading {
+		max-width: 450px;
+		margin-bottom: 18px;
+	}
+	.main-footer .widgets-section {
+		padding: 10px 0px 10px;
+	}
+	
 }

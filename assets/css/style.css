@@ -55,7 +55,7 @@
 
 .banner-one{
 	position:relative;
-	padding:280px 0px 80px;
+	padding:280px 0px 120px;
 	background-size:cover;
 	overflow: hidden;
 }
@@ -82,13 +82,15 @@
 	position:relative;
 }
 
-.banner-one_heading{
-	font-weight:700;
-	text-align:center;
-	margin-bottom:80px;
-	color: #FAAC00;
-	text-transform:uppercase;
+.banner-one_heading {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 80px;
+    color: #FAAC00;
+    text-transform: uppercase;
+    line-height: 0.7; /* Ajusta este valor según tus necesidades */
 }
+
 
 .banner-one_text{
 	position: relative;
@@ -104,7 +106,7 @@
 	position: relative;
 	font-size: 30px;
 	line-height: 40px;
-	padding-bottom:20px;
+	
 	padding-right:180px;
 	color: var(--white-color);
 	border-bottom:1px solid #FAAC00;
@@ -120,6 +122,10 @@
 	cursor:pointer;
 	-webkit-animation: icon-bounce 0.8s ease-out infinite;
     animation: icon-bounce 0.8s ease-out infinite;
+}
+.footer-column .footer_navs li a {
+    color: var(--white-color); /* Asegúrate de que esta variable esté definida como blanco */
+    text-decoration: none; /* Para quitar subrayados si es necesario */
 }
 
 /*** 
@@ -196,7 +202,7 @@
 
 .gallery-one{
 	position:relative;
-	padding:50px 0px 70px;
+	padding:20px 0px 30px;
 	background-color: #352E58;
 }
 
@@ -1209,7 +1215,7 @@
 
 .journal-detail{
 	position:relative;
-	padding:180px 0px 50px;
+	padding:20px 0px 20px;
 }
 
 .journal-detail .column{
@@ -1231,11 +1237,13 @@
 
 .journal-detail_title{
 	position:relative;
-	font-weight:400;
+	font-weight:00;
 	font-size:50px;
 	line-height:60px;
-	margin-bottom:15px;
+	margin-bottom:25px;
 	color:var(--white-color);
+	line-height: 0.8
+; 
 }
 
 .journal-detail p{
@@ -1525,3 +1533,176 @@ a.backtop:hover {
 html {
     scroll-behavior: smooth; /* Enable smooth scrolling behavior for the whole page */
 }
+
+.journal-one{
+	position:relative;
+	padding:100px 0px 70px;
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+.journal-one:before{
+	position:absolute;
+	content:'';
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	opacity:0.70;
+	background-color:var(--color-four);
+}
+
+.journal-one .journal-block_one {
+    flex: 0 0 auto; /* Evitar que se reduzca el tamaño del bloque */
+    width: 300px; /* Fijar el ancho de cada bloque */
+    margin-right: 15px; /* Espacio entre los bloques */
+}
+
+.journal-block_one{
+	position:relative;
+	margin-bottom:30px;
+}
+
+.journal-block_one-inner{
+	position:relative;
+	padding:25px 25px;
+	background-color:rgba(var(--black-color-rgb), 0.50);
+}
+
+.journal-block_one-inner:before{
+	position:absolute;
+	content:'';
+	left:-1px;
+	top:-1px;
+	right:-1px;
+	bottom:-1px;
+	opacity:0;
+	transform:scale(0.2,1);
+	-webkit-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+	background: var(--main-color);
+    background: linear-gradient(to top, var(--main-color) 0%, var(--color-two) 100%);
+}
+
+.journal-block_one-inner:hover::before{
+	opacity:1;
+	transform:scale(1,1);
+}
+
+.journal-block_one-title{
+	position:relative;
+	font-size:14px;
+	padding:5px 15px;
+	text-transform:capitalize;
+	color:var(--white-color);
+	display:inline-block;
+	-webkit-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+	border: 1px solid rgba(var(--white-color-rgb), 0.50);
+}
+
+.journal-block_one-inner:hover .journal-block_one-title{
+	color:var(--white-color);
+	border-color:var(--color-four);
+	background-color:var(--color-four);
+}
+
+.journal-block_one-heading{
+	position:relative;
+	font-weight:400;
+	margin-top:18px;
+	max-width:220px;
+	margin-bottom:110px;
+}
+
+.journal-block_one-heading a{
+	position:relative;
+	color:var(--white-color);
+}
+
+.journal-block_one-arrow{
+	position:absolute;
+	right:10px;
+	bottom:15px;
+	line-height:1em;
+	font-size:30px;
+	display:inline-block;
+	color:var(--white-color);
+	transform:rotate(45deg);
+}
+
+.journal-block_one-arrow:hover{
+	color:var(--color-four);
+}
+
+/* Nuevos estilos para el diseño en móviles */
+.journal-one .row {
+    display: flex; /* Cambiar a flexbox */
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    padding: 5px; /* Espacio alrededor de los bloques */
+    scrollbar-width: thin; /* Estilo de scrollbar en Firefox */
+    width: 100%; /* Asegurar que ocupa todo el ancho */
+	box-sizing: border-box;
+}
+
+/* Para navegadores Webkit */
+.journal-one .row::-webkit-scrollbar {
+    height: 8px; /* Altura de scrollbar */
+}
+
+.journal-one .row::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.5); /* Color de scrollbar */
+    border-radius: 0px; /* Bordes redondeados */
+}
+
+.journal-one .journal-block_one {
+    flex: 0 0 280px; /* Fijar el ancho de cada bloque */
+    margin-right: 0px; /* Espacio entre los bloques */
+    box-sizing: border-box; /* Incluir padding y margen en el tamaño total */
+}
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta esta distancia si necesitas que esté más arriba */
+    right: 20px;  /* Ajusta esta distancia si necesitas que esté más a la izquierda */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    border-radius: 50%; /* Hace el botón redondo */
+    padding: 7px; /* Tamaño del espacio alrededor del ícono */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar un efecto flotante */
+}
+
+.whatsapp-button img {
+    width: 50px; /* Ajusta el tamaño del ícono */
+    height: 50px;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e; /* Color al pasar el mouse por encima */
+}
+
+.video-wrapper {
+	padding: 20px; /* Esto es el margen interno alrededor del video */
+  }
+  
+  .video-container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%; /* Mantiene la relación de aspecto 16:9 */
+	height: 0;
+	overflow: hidden;
+  }
+  
+  .video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+  }
+  

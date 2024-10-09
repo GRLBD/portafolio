@@ -111,8 +111,9 @@
 body {
 	font-family: 'Clash Display';
 	line-height: 1.6em;
-	font-weight:400;
-	font-size:14px;
+	font-weight:500;
+	font-size:18px;
+	word-spacing: 5px;
 	
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
@@ -306,14 +307,21 @@ a:hover,a:focus,a:visited{
 	outline:none !important;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h3,h4,h5,h6 {
+	position:relative;
+	margin:0px;
+	background:none;
+	color:var(--color-four);
+	font-family: 'Montserrat';
+}
+
+h1 h2 {
 	position:relative;
 	margin:0px;
 	background:none;
 	color:var(--color-four);
 	font-family: 'Clash Display';
 }
-
 input,button,select,textarea{
 	
 }
@@ -346,7 +354,7 @@ h2{
 
 h3{
 	line-height:42px;
-	font-size:32px;
+	font-size:28px;
 }
 
 h4{
